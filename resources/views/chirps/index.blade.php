@@ -22,12 +22,11 @@
                             <div>
                                 <span class="text-gray-800">{{ $chirp->user->name }}</span>
                                 <small class="ml-2 text-sm text-gray-600">{{ $chirp->created_at->format('j M Y, g:i a') }}</small>
-                            </div>
-                            @unless ($chirp->created_at->eq($chirp->updated_at))
+                                @unless ($chirp->created_at->eq($chirp->updated_at))
                                     <small class="text-sm text-gray-600"> &middot; {{ __('edited') }}</small>
                                 @endunless
-                        </div>
-                        @if ($chirp->user->is(auth()->user()))
+                            </div>
+                            @if ($chirp->user->is(auth()->user()))
                                 <x-dropdown>
                                     <x-slot name="trigger">
                                         <button>
@@ -43,6 +42,7 @@
                                     </x-slot>
                                 </x-dropdown>
                             @endif
+                        </div>
                         <p class="mt-4 text-lg text-gray-900">{{ $chirp->message }}</p>
                     </div>
                 </div>

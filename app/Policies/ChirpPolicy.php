@@ -2,7 +2,7 @@
 
 namespace App\Policies;
 
-use App\Models\Crips;
+use App\Models\Chirp;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
@@ -19,7 +19,7 @@ class ChirpPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, Crips $crips): bool
+    public function view(User $user, Chirp $chirp): bool
     {
         //
     }
@@ -43,7 +43,7 @@ class ChirpPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Crips $crips): bool
+    public function delete(User $user, Chirp $chirp): bool
     {
         //
     }
@@ -51,7 +51,7 @@ class ChirpPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, Crips $crips): bool
+    public function restore(User $user, Chirp $chirp): bool
     {
         //
     }
@@ -59,7 +59,7 @@ class ChirpPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, Crips $crips): bool
+    public function forceDelete(User $user, Chirp $chirp): bool
     {
         //
     }
