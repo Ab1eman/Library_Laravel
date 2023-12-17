@@ -35,9 +35,9 @@
                     <p class="text-gray-400">Duration: Not Set</p>
                 @endif
                 <!-- Кнопка редактирования книги -->
-                <!-- <div class="mt-8">
+                <div class="mt-8">
                     <a href="{{ route('books.edit', $book) }}" class="text-blue-400 hover:underline">Edit</a>
-                </div> -->
+                </div>
             </div>
         </div>
     </x-app-layout>

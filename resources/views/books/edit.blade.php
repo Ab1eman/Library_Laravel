@@ -14,19 +14,20 @@
                 @csrf
                 <div class="mb-4">
                     <label for="title" class="text-gray-300 block">Title</label>
-                    <input type="text" name="title" required class="w-full p-2 border rounded-md bg-gray-700 text-white">
+                    <input type="text" name="title" required class="w-full p-2 border rounded-md bg-gray-700 text-white" value="{{ $book->title }}" >
                 </div>
                 <div class="mb-4">
                     <label for="author" class="text-gray-300 block">Author</label>
-                    <input type="text" name="author" required class="w-full p-2 border rounded-md bg-gray-700 text-white">
+                    <input type="text" name="author" required class="w-full p-2 border rounded-md bg-gray-700 text-white" value="{{ $book->author }}">
                 </div>
+
                 <div class="mb-4">
                     <label for="genre" class="text-gray-300 block">Genre</label>
-                    <input type="text" name="genre" required class="w-full p-2 border rounded-md bg-gray-700 text-white">
+                    <input type="text" name="genre" required class="w-full p-2 border rounded-md bg-gray-700 text-white"value="{{ $book->genre }}">
                 </div>
                 <div class="mb-4">
                     <label for="dateOfPublication" class="text-gray-300 block">Date Of Publication</label>
-                    <input type="date" name="dateOfPublication" required class="w-full p-2 border rounded-md bg-gray-700 text-white">
+                    <input type="date" name="dateOfPublication" required class="w-full p-2 border rounded-md bg-gray-700 text-white"value="{{ $book->dateOfPublication }}">
                 </div>
                 <div class="mb-4">
                     <label for="isAvailable" class="text-gray-300 block">Is Available</label>

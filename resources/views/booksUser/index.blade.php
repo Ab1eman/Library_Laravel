@@ -163,10 +163,13 @@
                         <span class="selectedDuration block mb-4 text-gray-300">1 day</span>
                         <input type="hidden" name="bookId" value="{{ $book->id }}">
                         <!-- Other details or fields related to the book can be added here -->
+                        <form action="/checkout" method="POST">
+                        <input type="hiden" name="_token" value="{{csrf_token()}}">
 
                         <div class="modal-footer border-t border-gray-700">
                             <button type="button" class="btn btn-secondary text-black" data-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary text-black">Save Duration</button>
+                            <button type="submit">Pay</button>
                         </div>
                     </form>
                 </div>
