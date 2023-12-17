@@ -7,11 +7,18 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\StripeController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/stripe','App\Http\Controllers\StripeController@index')->name('index');
+Route::post('/checkout','App\Http\Controllers\StripeController@checkout')->name('checkout');
+Route::post('/success','App\Http\Controllers\StripeController@success')->name('success');
+
+
 
 // Подтверждение почты
 Route::get('/email/verify', function () {
