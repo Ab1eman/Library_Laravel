@@ -8,7 +8,7 @@ class StripeController extends Controller
 {
     public function index()
     {
-        return view('index');
+        return view('dashboard');
     }
     
     public function checkout()
@@ -37,7 +37,7 @@ class StripeController extends Controller
     
     public function success()
     {
-        return view('index');
+        return view('dashboard');
     }
     
 

@@ -126,6 +126,12 @@
                                 data-book-id="{{ $book->id }}" data-title="{{ $book->title }}">
                                 {{ isset($book->duration) ? '' : 'Get the book' }}
                             </a>
+                            <form action="/checkout" method="POST" class="ml-2">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">
+                                    Pay
+                                </button>
+                            </form>
                         </td>
                     </tr>
                     @empty
@@ -138,6 +144,7 @@
         </section>
     </x-app-layout>
 </body>
+
 
 
 
@@ -163,13 +170,9 @@
                         <span class="selectedDuration block mb-4 text-gray-300">1 day</span>
                         <input type="hidden" name="bookId" value="{{ $book->id }}">
                         <!-- Other details or fields related to the book can be added here -->
-                        <form action="/checkout" method="POST">
-                        <input type="hiden" name="_token" value="{{csrf_token()}}">
-
                         <div class="modal-footer border-t border-gray-700">
                             <button type="button" class="btn btn-secondary text-black" data-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary text-black">Save Duration</button>
-                            <button type="submit">Pay</button>
                         </div>
                     </form>
                 </div>
